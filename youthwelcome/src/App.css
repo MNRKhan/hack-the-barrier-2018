@@ -21,26 +21,50 @@
 .App-intro {
   font-size: large;
 }
-
-.chatWindow {
-	width: 300px;
-	height: 500px;
-	background-color: #f9f9f9;
-}
-
+/* Messenger*/
 .messageHeader {
   
   font-family: 'Arial';
-  font-size: 14px;
+  font-size: 18px;
   color: #000000;
 
+  text-align: left;
+}
 
+.chatTitle {
+  width:100%;
+  height:15%;
+
+    
+  font-family: 'Arial';
+  font-size: 22px;
+  color: #000000;
+
+  font-weight: 4;
+
+  text-align: center;
+}
+
+.messageTextBox {
+  width: 95%;
+  height: 10%;
+
+  align-self: left;
+}
+
+.messageWindow {
+  height: 482px;
 }
 
 .messageList{
   list-style: none;
-  margin: 10px 0 10px 0;
+  margin: 0px 0 0px 0;
+  padding: 0 14px 0 14px;
+}
 
+.messageListElement{
+  list-style: none;
+  margin: 10px 0 10px 0;
 }
 
 .messageBubble {
@@ -49,12 +73,15 @@
 
   background-color: #5f9cec;
   font-family: 'Arial';
-  font-size: 14px;
+  font-size: 18px;
   color: #ffffff;
 
-  padding: 4px 4px 4px 4px;
+  text-align: left;
+
+  padding: 8px 8px 8px 8px;
 
 }
+
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
