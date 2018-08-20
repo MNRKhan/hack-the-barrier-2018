@@ -1,13 +1,12 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Tabs from "./Tabs";
+import Forum from "./Forum";
+import logo from "./logo.svg";
+import "./App.css";
 
-import ChatWindow from './ChatWindow';
+import ChatWindow from "./ChatWindow";
 
-import Tabs from './Tabs';
-import Forum from './Forum';
-
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
 	  <div>
