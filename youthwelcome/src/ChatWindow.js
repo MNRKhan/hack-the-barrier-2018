@@ -21,11 +21,11 @@ class ChatWindow extends React.Component {
 class MessageList extends React.Component {
   render() {
     return (
-      <ul className="message-list">                 
+      <ul>                 
         {this.props.messages.map(message => {
           return (
-           <li key={message.id}>
-             <div>
+           <li className = "messageList" key={message.id}>
+             <div className = "messageHeader">
                {message.senderId}
              </div>
              <div className = "messageBubble">

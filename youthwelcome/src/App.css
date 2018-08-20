@@ -28,6 +28,34 @@
 	background-color: #f9f9f9;
 }
 
+.messageHeader {
+  
+  font-family: 'Arial';
+  font-size: 14px;
+  color: #000000;
+
+
+}
+
+.messageList{
+  list-style: none;
+  margin: 10px 0 10px 0;
+
+}
+
+.messageBubble {
+
+  border-radius: 8px;
+
+  background-color: #5f9cec;
+  font-family: 'Arial';
+  font-size: 14px;
+  color: #ffffff;
+
+  padding: 4px 4px 4px 4px;
+
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
