@@ -25,12 +25,8 @@ class App extends Component {
             <ChatWindow />
           </div>
         </Tabs>
-        
       </div>
-	  <div>
-		<ChatWindow />
-	  </div>
-	  </div>
+    </div>
     );
   }
 }
