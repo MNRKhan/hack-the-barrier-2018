@@ -22,8 +22,10 @@
   font-size: large;
 }
 
-.test {
-	background-color: $222;
+.chatWindow {
+	width: 300px;
+	height: 500px;
+	background-color: #f9f9f9;
 }
 
 @keyframes App-logo-spin {

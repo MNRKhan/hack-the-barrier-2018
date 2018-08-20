@@ -28,7 +28,7 @@ class MessageList extends React.Component {
              <div>
                {message.senderId}
              </div>
-             <div>
+             <div className = "messageBubble">
                {message.text}
              </div>
            </li>
