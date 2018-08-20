@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import ChatWindow from './ChatWindow';
+
 import Tabs from './Tabs';
 import Forum from './Forum';
 
@@ -20,9 +22,7 @@ class App extends Component {
             </Forum>
           </div>
           <div label="Chat">
-            <p className="App-intro">
-              To get started, edit <code>src/App.js</code> and save to reload.
-            </p>
+            <ChatWindow />
           </div>
         </Tabs>
         
