@@ -3,10 +3,6 @@ import React, { Component } from "react";
 // WIP
 
 class SideBarItem extends Component {
-  onClick(name) {
-    alert(name);
-  }
-
   render() {
     if (this.props) {
       return (
@@ -18,14 +14,12 @@ class SideBarItem extends Component {
             width: "100%"
           }}
         >
-          {/* <img src={ require('./badminton.jpg') } /> */}
           <button
-            onClick={() => this.onClick(this.props.name)}
+            onClick={() => this.props.onClick(this.props.name)}
             class="button"
             style={{
               ...buttonStyle,
-              backgroundColor: this.props.backgroundColor,
-              ...modalButton
+              backgroundColor: this.props.backgroundColor
             }}
           >
             {this.props.name}
@@ -36,12 +30,7 @@ class SideBarItem extends Component {
   }
 }
 
-var modalButton = {
-    backgroundImage: 'url(badminton.jpg)'
-}
-
 const buttonStyle = {
-  // backgroundImage: 
   backgroundColor: "#4CAF50" /* Green */,
   border: "none",
   color: "white",

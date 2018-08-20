@@ -5,8 +5,13 @@ class ChatWindow extends React.Component {
   constructor() {
     super();
     this.state = {
-      messages: DUMMY_DATA
+      messages: DUMMY_DATA,
+      groupName: ""
     };
+  }
+
+  onClick(name) {
+    alert(name);
   }
 
   render() {
@@ -19,7 +24,7 @@ class ChatWindow extends React.Component {
         }}
       >
         <div>
-          <SideBar />
+          <SideBar onClick={this.onClick} userName="Bob Patel" />
         </div>
         <div
           className="MessageBar"
