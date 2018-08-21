@@ -1,2 +1,2 @@
 # hack-the-barrier-2018
-Hack the Barrier 2018 Project
+A website intended for immigrants into Canada to connect them with post-immigrants and ease the cultural shock of a new country. The website has a forum page and a group chat page. The forum allows for Q&A sessions and the chat is divided into interest based rooms. Each room can have upto 1500 users. The frontend of the website has been done using ReactJS and the backend using the Chatkit API.
