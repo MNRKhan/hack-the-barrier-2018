@@ -1,5 +1,6 @@
 import React from "react";
 import Chatkit from "@pusher/chatkit";
+import HoverableText from "./HoverableText";
 
 const instanceLocator = "v1:us1:5f6f671c-5638-4ab3-b928-0c0f97c6b872";
 const secretKey =
@@ -190,7 +191,10 @@ class MessageList extends React.Component {
                     isLeftSided ? "messageBubble-Left" : "messageBubble-Right"
                   }
                 >
-                  {message.text}
+                  <HoverableText
+                    defaultText={message.text}
+                    hoverText={message.senderId}
+                  />
                 </div>
                 <hr />
               </li>
