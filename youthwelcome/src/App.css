@@ -1,108 +1,211 @@
+/* General */
 .App {
+  height: 100vh;
+  width: 100%;
+}
+
+.FullPage {
+  background-color: #000000;
+  height: 100vh;
+  width: 100%;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+/* Side Panel */
+.SidePanel {
+  background-color: transparent;
+  height: 100vh;
+  width: 20%;
+  padding: 0px;
+  color: #ffffff;
+  float: left;
+}
+.SidePanel-Header {
+  background-color: #d2443a;
+  overflow: hidden;
+  height: 10%;
+  width: 100%;
+  border-color: #d2443a;
+  border-width: thick;
+  border-radius: 10% 20%;
+  color: #ffffff;
+  padding: 8% 5%;
+  text-align: left;
+  text-decoration: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+.SidePanel-ItemList {
+  height: 90%;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.SidePanel-Item {
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+/* Main Panel */
+.MainPanel {
+  background-color: transparent;
+  height: 100vh;
+  width: 80%;
+  padding: 0px;
+  color: #ffffff;
+  float: right;
+}
+.MainPanel-Header {
+  background-color: #d2443a;
+  overflow: hidden;
+  text-align: center;
+  vertical-align: middle;
+  height: 5%;
+  width: 100%;
 }
 
-.App-title {
-  font-size: 1.5em;
+/* ChatWindow */
+.chatTitle {
+  width: 100%;
+  height: 15%;
+  font-family: Arial;
+  font-size: 22px;
+  color: #ffffff;
+  font-weight: 4;
+  text-align: center;
 }
-
-.App-intro {
-  font-size: large;
-}
-/* Messenger*/
-.messageHeader {
-  
-  font-family: 'Arial';
+.messageHeader-Left {
+  display: block;
+  font-family: Arial;
   font-size: 18px;
-  color: #000000;
-
+  color: #ffffff;
   text-align: left;
 }
-
-.chatTitle {
-  width:100%;
-  height:15%;
-
-    
-  font-family: 'Arial';
-  font-size: 22px;
-  color: #000000;
-
-  font-weight: 4;
-
-  text-align: center;
+.messageHeader-Right {
+  display: block;
+  font-family: Arial;
+  font-size: 18px;
+  color: #ffffff;
+  text-align: right;
 }
-
 .messageTextBox {
-  width: 95%;
+  width: 100%;
   height: 10%;
-
-  align-self: left;
+  float: left;
+  padding: 10px 28px;
 }
-
 .messageWindow {
-  height: 482px;
+  height: 10px;
 }
-
-.messageList{
+.messageList {
   list-style: none;
   margin: 0px 0 0px 0;
   padding: 0 14px 0 14px;
 }
-
-.messageListElement{
+.messageListElement {
   list-style: none;
   margin: 10px 0 10px 0;
 }
-
-.messageBubble {
-
+.messageBubble-Left {
+  display: block;
+  float: left;
+  width: 50%;
   border-radius: 8px;
-
-  background-color: #5f9cec;
-  font-family: 'Arial';
+  background: linear-gradient(left, #d2443a, #000000);
+  font-family: Arial;
   font-size: 18px;
   color: #ffffff;
-
   text-align: left;
-
   padding: 8px 8px 8px 8px;
-
 }
-
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.messageBubble-Right {
+  display: block;
+  float: right;
+  width: 50%;
+  border-radius: 8px;
+  background: linear-gradient(right, #d2443a, #000000);
+  font-family: Arial;
+  font-size: 18px;
+  color: #ffffff;
+  text-align: right;
+  padding: 8px 8px 8px 8px;
+}
+.send-message-form {
+  padding: 10px 0px;
+  background: transparent;
 }
 
 /* tabs */
 .tab-list {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #0c0c0c;
   padding-left: 0;
 }
-
 .tab-list-item {
   display: inline-block;
   list-style: none;
   margin-bottom: -1px;
   padding: 0.5rem 0.75rem;
 }
-
 .tab-list-active {
   background-color: white;
   border: solid #ccc;
   border-width: 1px 1px 0 1px;
+}
+
+/* App Logo */
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 30px;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Customize Built-In Properties */
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 15px;
+  background-color: transparent;
+}
+::-webkit-scrollbar-track {
+  border-radius: 100vh;
+  background: transparent;
+  border: 1px solid #d2443a;
+}
+::-webkit-scrollbar-track:hover {
+  border-radius: 100vh;
+  background: linear-gradient(left, #d2443a, #000000);
+  border: 1px solid #0f0f0f;
+}
+::-webkit-scrollbar-track:active {
+  border-radius: 100vh;
+  background: linear-gradient(left, #d2443a, #000000);
+  border: 1px solid #0f0f0f;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 100vh;
+  background: transparent;
+  border: 1px solid #d2443a;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(right, #d2443a, #000000);
+}
+::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(right, #d2443a, #000000);
+}
+textarea {
+  background: linear-gradient(left, #d2443a, #000000);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+}
+button {
+  background: linear-gradient(left, #d2443a, #000000);
+  border-radius: 8px;
 }

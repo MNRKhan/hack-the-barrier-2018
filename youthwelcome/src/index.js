@@ -1,18 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
-
-//tab
-import { render } from "react-dom";
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import registerServiceWorker from "./registerServiceWorker";
 
 //Forum stuff
-import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.css';
-global.jQuery = require('jquery');
-require('bootstrap');
+import "bootstrap";
+import "bootstrap/dist/css/bootstrap.css";
+global.jQuery = require("jquery");
+require("bootstrap");
 //end forum stuff
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById("root"));
 registerServiceWorker();

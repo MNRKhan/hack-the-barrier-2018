@@ -1,12 +1,15 @@
-import React, { Component } from "react";
-import SideBar from "./SideBar";
+import React from "react";
+import ChatWindow from "./ChatWindow";
 
-class MainPanel extends Component {
-
+class MainPanel extends React.Component {
   render() {
     return (
-      <div className="ChatBox">
-        <SideBar />
+      <div className="MainPanel-Element">
+        <ChatWindow
+          groupName={this.props.groupName}
+          groupId={this.props.groupId}
+          userId={this.props.userId}
+        />
       </div>
     );
   }

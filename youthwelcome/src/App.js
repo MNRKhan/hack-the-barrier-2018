@@ -1,19 +1,50 @@
 import React from "react";
+import "./App.css";
 import Tabs from "./Tabs";
 import Forum from "./Forum";
-import logo from "./logo.svg";
-import "./App.css";
+import SidePanel from "./SidePanel";
+import MainPanel from "./MainPanel";
 
-import ChatWindow from "./ChatWindow";
+const ROOMS = [
+  "Cricket",
+  "Soccer",
+  "Badminton",
+  "Art",
+  "Rock and Roll",
+  "Novels",
+  "Stand Up Comedy",
+  "Camping",
+  "Canoeing",
+  "Travel",
+  "Hiking"
+];
+
+const ROOM_IDS = [14340058, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      groupName: ROOMS[0],
+      groupId: ROOM_IDS[0],
+      userId: "Bob"
+    };
+    this.handleChangeRoom = this.handleChangeRoom.bind(this);
+  }
+
+  async handleChangeRoom(name, id) {
+    await this.setState({
+      groupName: name,
+      groupId: id
+    });
+  }
+
   render() {
     return (
-	  <div>
       <div className="App">
-        <header className="App-header">
+        {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">Welcome to Canada</h1>
         </header>
         <Tabs>
           <div label="Forum">
@@ -23,9 +54,24 @@ class App extends React.Component {
           <div label="Chat">
             <ChatWindow />
           </div>
-        </Tabs>
+        </Tabs> */}
+        <div className="FullPage">
+          <div className="SidePanel">
+            <SidePanel
+              onClick={this.handleChangeRoom}
+              joinedRoooms={ROOMS}
+              joinedRoomsIds={ROOM_IDS}
+            />
+          </div>
+          <div className="MainPanel">
+            <MainPanel
+              groupName={this.state.groupName}
+              groupId={this.state.groupId}
+              userId={this.state.userId}
+            />
+          </div>
+        </div>
       </div>
-    </div>
     );
   }
 }
