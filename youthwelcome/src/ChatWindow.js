@@ -80,6 +80,7 @@ class ChatWindow extends React.Component {
       roomId: this.props.groupId
     });
   }
+
   render() {
     return (
       <div

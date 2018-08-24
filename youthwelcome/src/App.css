@@ -21,14 +21,13 @@
   float: left;
 }
 .SidePanel-Header {
-  background-color: #d2443a;
+  background: linear-gradient(left, #d2443a, #ffffff);
   overflow: hidden;
   height: 10%;
   width: 100%;
   border-color: #d2443a;
   border-width: thick;
-  border-radius: 10% 20%;
-  color: #ffffff;
+  border-radius: 2vh;  color: #ffffff;
   padding: 8% 5%;
   text-align: left;
   text-decoration: none;
@@ -207,5 +206,13 @@ textarea {
 }
 button {
   background: linear-gradient(left, #d2443a, #000000);
+  border-radius: 8px;
+}
+button:hover {
+  background: linear-gradient(left, #d2443a, #ffffff);
+  border-radius: 8px;
+}
+button:focus {
+  background: linear-gradient(left, #d2443a, #ffffff);
   border-radius: 8px;
 }
